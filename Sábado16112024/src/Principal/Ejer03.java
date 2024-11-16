@@ -24,15 +24,33 @@ public class Ejer03 {
 			System.out.println();
 		}
 	}
+	public static void MediasAlumno(int m[][]) {
+		int suma;
+		int MAsig[]=new int[ m[0].length ];
+		
+		for(int i=0;i<m.length;i++) {
+		     suma=0;	
+			for(int j=0;j<m[i].length;j++) {
+			    System.out.printf("  %3d", m[i][j]);
+			    suma +=m[i][j];
+			    MAsig[j] +=m[i][j];
+			}
+			
+			System.out.printf(" %.2f\n", (double)suma/m[i].length);
+		}
+		
+		
+		for(int i=0;i<MAsig.length;i++) System.out.printf(" %.2f", (double)MAsig[i]/m.length);
+		
+	}
 	
 	public static void main(String[] args) {
 
-		int notas[][]=new int[10][5];
+		int notas[][]=new int[5][7];
 		rellenar(notas);
-		imprimir(notas);
-
+		//imprimir(notas);
+		MediasAlumno(notas);
 	
-		
 
 	}
 
