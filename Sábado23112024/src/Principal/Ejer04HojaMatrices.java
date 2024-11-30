@@ -32,9 +32,6 @@ public class Ejer04HojaMatrices {
     	      if (!encontrado)break;
     	      }
     	      m[i][j]=aleatorio;
-	    			
-	    		    			
-    			
     		}
     	}
     }
