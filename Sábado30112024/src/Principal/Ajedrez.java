@@ -15,8 +15,6 @@ public class Ajedrez {
 		System.out.println(columnas.indexOf(columna));
 		System.out.println(filas.indexOf(fila));
 		
-		
-		System.out.println("hola como estais".indexOf("z"));
-	}
+		}
 
 }
