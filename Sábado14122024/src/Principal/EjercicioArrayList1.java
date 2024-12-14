@@ -14,12 +14,12 @@ public class EjercicioArrayList1 {
 	 * boolean contains(E elemento) 
 	 * int indexOf(E elemento) 
 	 * Iterator<E> * iterator() 
+	 * E remove(int posicion) 
+	 * boolean remove(E elemento)  
 	 *  
 	 * void clear()
 	 * boolean equals(Object x) 
 	 * boolean isEmpty() 
-	 * E remove(int posicion) 
-	 * boolean remove(E elemento)  
 	 */
    public static int alea(int li,int ls) {
 	   return (int)(Math.random()*(ls-li+1))+li;
