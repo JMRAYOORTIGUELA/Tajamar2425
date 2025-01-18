@@ -9,9 +9,9 @@ public class Persona {
 	
 	public Persona(String n, String a, int e) {
 		super();
-		Nombre = n;
-		Apellido = a;
-		Edad = e;
+		this.Nombre = n;
+		this.Apellido = a;
+		this.Edad = e;
 	}
 
 	public Persona(String nombre, String apellido) {

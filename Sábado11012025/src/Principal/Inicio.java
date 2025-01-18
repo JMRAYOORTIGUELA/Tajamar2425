@@ -6,6 +6,9 @@ public class Inicio {
 
 	public static void main(String[] args) {
 		
+		Persona p0=new Persona();
+		System.out.println(p0);
+		
 		
 		Persona p1=new Persona("Jose","Perez",25);
 		
