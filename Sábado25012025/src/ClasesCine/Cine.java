@@ -40,6 +40,7 @@ public class Cine {
 
 	private void rellenaButacas() {
     	int fila=asientos.length;
+    	
     	for(int i=0;i<asientos.length;i++) {
     		for(int j=0;j<asientos[i].length;j++) {
     			asientos[i][j]=new Asiento( (char)('A'+j)    ,fila );

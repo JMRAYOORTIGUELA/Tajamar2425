@@ -38,6 +38,9 @@ public class Espectador {
     public boolean tieneEdad(int ed) {
     	return edad>=ed;
     }
+    public void paga(double di) {
+    	this.dinero-=di;
+    }
     
 }
 
