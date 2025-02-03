@@ -2,8 +2,22 @@ package Clases;
 
 import java.util.Objects;
 
-public class Persona {
-  private String nombre;
+public class Persona implements Cloneable{
+	
+	
+	
+  @Override
+	public Object clone()  {
+		// TODO Auto-generated method stub
+	  try {
+		return super.clone();
+	  }catch(CloneNotSupportedException e) {
+		  System.out.println(e.getMessage());
+	  }
+	  return null;
+	}
+  
+private String nombre;
   private int edad;
 public Persona(String nombre, int edad) {
 	super();
@@ -13,23 +27,8 @@ public Persona(String nombre, int edad) {
 public String getNombre() {
 	return nombre;
 }
-@Override
-public int hashCode() {
-	return Objects.hash(edad, nombre);
-}
 
 
-@Override
-public boolean equals(Object obj) {
-	if (this == obj)
-		return true;
-	if (obj == null)
-		return false;
-	if (getClass() != obj.getClass())
-		return false;
-	Persona other = (Persona) obj;
-	return edad == other.edad && Objects.equals(nombre, other.nombre);
-}
 
 public void setNombre(String nombre) {
 	this.nombre = nombre;

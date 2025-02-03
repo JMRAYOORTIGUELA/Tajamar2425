@@ -14,21 +14,24 @@ public class inicioPersona {
 	}
 	
 	public static void main(String[] args) {
-            int n1=10;
-            int n2=n1;
-		
-		Persona ana=new Persona("ana",40);
-		Persona ana2=new Persona("ana",40);
-        Persona ana3=ana2;
-		
-        ana2.setNombre("ana luisa");
-        
-				
-        System.out.println(ana2);
-        System.out.println(ana3);
 
 		
-			}	
-	
+     Persona p1=new Persona("ana",42);
+     Persona p2=new Persona(p1.getNombre(),p1.getEdad());
+     Persona p3=(Persona)p1.clone();
+     
+ 
+
+     System.out.println(p1+" "+p1.hashCode());
+     System.out.println(p2+" "+p2.hashCode());
+     System.out.println(p3+" "+p3.hashCode());
+     
+     if (p1.equals(p2)) {
+    	 System.out.println("Somos iguales");
+     }else {
+    	 System.out.println("Somos distintos");
+     }
+
+	}
 
 }
