@@ -16,7 +16,7 @@ public class Cuadrado extends FigurasGeometricas {
 	@Override
 	public double area() {
 		
-		return Math.pow(this.lado1, this.lado1);
+		return Math.pow(this.lado1, 2);
 	}
 
 	@Override

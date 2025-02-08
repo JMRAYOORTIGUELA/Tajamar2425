@@ -9,13 +9,11 @@ public class Cubo extends Cuadrado {
 
 	@Override
 	public double perimetro() {
-		
 		return 12*this.lado1;
 	}
 
 	@Override
 	public double area() {
-		
 		return 6*Math.pow(this.lado1, 2);
 	}
 	public double volumen() {

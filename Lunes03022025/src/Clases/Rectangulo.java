@@ -32,7 +32,7 @@ public class Rectangulo extends FigurasGeometricas{
 
 	@Override
 	public String toString() {
-		return "Rectangulo("+this.lado1+","+this.lado2+")";
+		return "Rectangulo("+this.lado1+","+this.lado2+")"+super.toString();
 	}
 
 }
