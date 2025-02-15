@@ -1,13 +1,24 @@
 package Clases;
 
 public abstract class CCuenta {
+	
+   //Atributos comunes a todas las cuentas:CuentaAhorro,CuentaCorriente,CuentaCorrienteConIn	
    protected String nombre;
    protected String cuenta;
    protected double saldo;
    protected double tipoDeInterés;
    
+   
+//Constructores sobrecargados
 
-public CCuenta(String nombre, String cuenta, double saldo, double tipoDeInterés) {
+   public CCuenta() {
+	   this.nombre="";
+	   this.cuenta="";
+	   this.saldo=0;
+	   this.tipoDeInterés=0;
+   }
+
+   public CCuenta(String nombre, String cuenta, double saldo, double tipoDeInterés) {
 	super();
 	this.nombre = nombre;
 	this.cuenta = cuenta;
@@ -21,6 +32,8 @@ public CCuenta(String nombre, String cuenta,  double tipoDeInterés) {
 	this.saldo = 0;
 	this.tipoDeInterés = tipoDeInterés;
 }
+
+
 public String getNombre() {
 	return nombre;
 }
@@ -45,9 +58,12 @@ public double getTipoDeInterés() {
 public void setTipoDeInterés(double tipoDeInterés) {
 	this.tipoDeInterés = tipoDeInterés;
 }
+
+
 public void ingreso(double euros) {
 	this.saldo +=euros;
 }
+
 public void reintegro(double euros) {
 	if (euros<=this.saldo) {
 		this.saldo -=euros;
@@ -55,8 +71,10 @@ public void reintegro(double euros) {
 		System.out.println("Imposible.No tienes saldo");
 	}
 }	
+
 	public abstract void comisiones();
 	public abstract double intereses();
+	
 	@Override
 	public String toString() {
 		return "CCuenta [nombre=" + nombre + ", cuenta=" + cuenta + ", saldo=" + saldo + ", tipoDeInterés="

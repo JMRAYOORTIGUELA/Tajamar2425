@@ -16,6 +16,7 @@ public class Cubo extends Cuadrado {
 	public double area() {
 		return 6*Math.pow(this.lado1, 2);
 	}
+	
 	public double volumen() {
 		return Math.pow(this.lado1, 3);
 	}

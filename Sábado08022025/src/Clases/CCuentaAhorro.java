@@ -8,7 +8,9 @@ public class CCuentaAhorro extends CCuenta {
 
 
 	public CCuentaAhorro(String nombre, String cuenta, double saldo, double tipoDeInterés, double cuotaMantenimiento) {
+		
 		super(nombre, cuenta, saldo, tipoDeInterés);
+		
 		this.cuotaMantenimiento = cuotaMantenimiento;
 	}
 
@@ -18,6 +20,14 @@ public class CCuentaAhorro extends CCuenta {
 
 	public void setCuotaMantenimiento(double cuotaMantenimiento) {
 		this.cuotaMantenimiento = cuotaMantenimiento;
+	}
+
+
+	@Override
+	public String toString() {
+		
+		return "CCuenta [nombre=" + nombre + ", cuenta=" + cuenta + ", saldo=" + saldo + ", tipoDeInterés="
+		+ tipoDeInterés + " cuotaMantenimiento=" + cuotaMantenimiento+ "]";
 	}
 
 	@Override
@@ -34,12 +44,6 @@ public class CCuentaAhorro extends CCuenta {
 		
 		return this.saldo*this.tipoDeInterés/1200;
       
-	}
-
-	@Override
-	public String toString() {
-		return "CCuenta [nombre=" + nombre + ", cuenta=" + cuenta + ", saldo=" + saldo + ", tipoDeInterés="
-		+ tipoDeInterés + " cuotaMantenimiento=" + cuotaMantenimiento+ "]";
 	}
 
 }

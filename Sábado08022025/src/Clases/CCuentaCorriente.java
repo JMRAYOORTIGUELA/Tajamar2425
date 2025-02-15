@@ -55,6 +55,7 @@ public class CCuentaCorriente extends CCuenta {
 	@Override
 	public void comisiones() {
 	   LocalDate hoy=LocalDate.now();
+	   
        if (hoy.getDayOfMonth()==1) {
     	   int n=this.transacciones-this.transExentas;
     	   if (n>0)reintegro(n*this.importePorTrans);
