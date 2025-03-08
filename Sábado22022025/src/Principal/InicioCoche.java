@@ -30,7 +30,7 @@ public class InicioCoche {
 		System.out.println(c2.getNCoches());
 		
 		
-		c1.set
+		
 		
 
 	}
