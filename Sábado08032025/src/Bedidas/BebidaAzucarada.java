@@ -27,7 +27,7 @@ public class BebidaAzucarada extends Bebida {
 		this.promocion = promocion;
 	}
 	public double getPrecio() {
-		double total= this.promocion ? this.getPrecio()*0.9 :this.getPrecio();
+		double total= this.promocion ? super.getPrecio()*0.9 : super.getPrecio();
 		return total;
 	}
 	@Override
