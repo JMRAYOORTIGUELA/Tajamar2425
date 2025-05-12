@@ -8,9 +8,7 @@ public class Biblioteca {
 		int n=0;
 		
 		do {
-			for (String item : op) {
-				System.out.println(item);
-			}
+			for (String item : op) 	System.out.println(item);
 			System.out.print("Eliga una opción ");
 			n=Integer.valueOf(sc.nextLine());
 		

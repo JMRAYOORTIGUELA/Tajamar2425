@@ -62,8 +62,8 @@ public void setStock(int stock) {
 
 @Override
 public String toString() {
-	return "Articulo [codigo=" + codigo + ", descripcion=" + descripcion + ", precio_compra=" + precio_compra
-			+ ", precio_venta=" + precio_venta + ", stock=" + stock + "]";
+	return "codigo=" + codigo + ", descripcion=" + descripcion + ", precio_compra=" + precio_compra
+			+ ", precio_venta=" + precio_venta + ", stock=" + stock ;
 }
   
   
