@@ -14,11 +14,9 @@ public class InicioHashMap {
 		
 		while(true) {
 			System.out.print("Dime el codigo ");codigo=sc.nextLine();
-			if (existe(li,codigo)!=null) {
-				System.out.println("El "+codigo+" ya existe.");
-			}else {
-				break;
-			}
+			if (existe(li,codigo)==null) break;
+			System.out.println("El "+codigo+" ya existe.");
+			
 		};
 		
 		System.out.print("Dime la descripción ");String descripcion=sc.nextLine();
@@ -34,11 +32,9 @@ public class InicioHashMap {
 		
 		while(true) {
 			System.out.print("Dime el codigo ");codigo=sc.nextLine();
-			if (existe(li,codigo)!=null) {
-				break;
-			}else {
+			if (existe(li,codigo)!=null) break;
+			
 				System.out.print("El codigo no existe");
-			}
 		};
 		li.remove(codigo);
 	}
@@ -58,7 +54,9 @@ public class InicioHashMap {
 			if (codigo!=null)break;
 			System.out.println("El "+codigo+" no existe.");
 		};
+		
 		Articulo art=li.get(codigo);
+		
 		   System.out.println("Código: " + art.getCodigo());
            System.out.print("Nuevo código: ");new_codigo = sc.nextLine();
            if (!new_codigo.equals("")) art.setCodigo(new_codigo);
@@ -80,6 +78,7 @@ public class InicioHashMap {
            System.out.println("Stock: " + art.getStock());
            System.out.print("Nuevo stock: ");stock = sc.nextLine();
            if (!stock.equals("")) art.setStock(Integer.parseInt(stock));
+           
            li.put(codigo, art);
 		
 	}

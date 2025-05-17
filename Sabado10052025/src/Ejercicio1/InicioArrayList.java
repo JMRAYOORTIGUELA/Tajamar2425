@@ -34,7 +34,7 @@ public class InicioArrayList {
 	    	 if (codigo.equals(li.get(i).getCodigo())){
 	    		 li.remove(i);
 	    		 System.out.println("Elemento eliminado");
-	    		 return;
+	    		 return ;
 	    	 }
 	     }
 	     System.out.println(codigo+" no existe.");
@@ -65,6 +65,7 @@ public class InicioArrayList {
 			if (i>-1)break;
 			System.out.println("El "+codigo+" no existe.");
 		};
+		
 		   System.out.println("Código: " + li.get(i).getCodigo());
            System.out.print("Nuevo código: ");codigo = sc.nextLine();
            if (!codigo.equals("")) li.get(i).setCodigo(codigo);
@@ -118,7 +119,7 @@ public class InicioArrayList {
 			System.out.println("El "+codigo+" no existe.");
 		};
 
-         System.out.print("Introduzca el número de unidades que salen: ");
+         System.out.print("Introduzca el número de unidades que salen: "+li.get(i).getStock());
          int stock = Integer.valueOf(sc.nextLine());
          if ( li.get(i).getStock()-stock>0) {
         	 li.get(i).setStock( li.get(i).getStock()-stock);
